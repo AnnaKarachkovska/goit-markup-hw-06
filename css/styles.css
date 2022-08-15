@@ -573,11 +573,26 @@ body {
 }
 
 .footer-form .btn {
+    padding: 10px 28px;
 
+    display: inline-flex;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    
+    cursor: pointer;
+    color: var(--white);
+    border: none;
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 }
 
-.footer-form .btn::after {
-
+.footer-btn-icon {
+    margin-left: 10px;
 }
 
 /* Модальне вікно */
