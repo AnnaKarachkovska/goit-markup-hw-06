@@ -572,6 +572,35 @@ body {
     color: var(--white);
 }
 
+.footer-form-input {
+    margin-right: 12px;
+    padding-top: 13px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+
+    width: 358px;
+    height: 50px;
+
+    color: var(--white);
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    transition: border-color var(--anim);
+}
+
+.footer-form-input:focus {
+    border-color: var(--accent-color);
+    outline: transparent;
+}
+
+.footer-form-input::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+}
+
 .footer-form .btn {
     padding: 10px 28px;
 
@@ -589,6 +618,13 @@ body {
     background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+
+    transition: background-color var(--anim);
+}
+
+.footer-form .btn:focus,
+.footer-form .btn:hover {
+    background-color: #188CE8;
 }
 
 .footer-btn-icon {
@@ -629,7 +665,7 @@ body {
     transform: translate(-50%, -50%) scale(1);
 
     width: 528px;
-    height: 581px;
+    min-height: 581px;
 
     background-color: var(--white);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -648,14 +684,183 @@ body {
     justify-content: center;
     align-items: center;
 
+    color: var(--main-text-color);
     cursor: pointer;
     width: 30px;
     height: 30px;
     background-color: #FFFFFF;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+
+    transition: color var(--anim);
 }
 
+.modal-btn-icon {
+    fill: currentColor;
+}
+
+.modal .btn:focus,
+.modal .btn:hover {
+    color: var(--accent-color);
+}
+
+.reg-form {
+    padding: 40px;
+}
+
+.reg-title {
+    display: block;
+    margin-bottom: 12px;
+
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+}
+
+.reg-group {
+    margin-bottom: 20px;
+}
+
+.reg-wrap {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.reg-wrap:not(last-child) {
+    margin-bottom: 10px;
+}
+
+.reg-label {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    
+    color: var(--text-color);
+}
+
+.reg-field {
+    height: 40px;
+    padding: 11px 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
+
+    transition: border-color var(--anim);
+}
+
+.reg-icon {
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+
+    transition: fill var(--anim);
+}
+
+.reg-field:focus,
+.reg-msg:focus {
+    border-color: var(--accent-color);
+}
+
+.reg-field:focus + .reg-icon {
+    fill: var(--accent-color);
+}
+
+.reg-msg {
+    height: 120px;
+    padding: 11px 15px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
+    resize: none;
+
+    transition: border-color var(--anim);
+}
+
+.reg-msg::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    
+    color: rgba(117, 117, 117, 0.5);
+}
+
+.reg-agreement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-bottom: 30px;
+}
+
+.icon-uncheck {
+    transition: opacity var(--anim);
+}
+
+/* .reg-checkbox:focus+.reg-agreement-icon {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 1px;
+    border-radius: 2px;
+} */
+
+.reg-checkbox:checked + .reg-agreement-icon > .icon-uncheck {
+    opacity: 0;
+}
+
+.icon-check {
+    opacity: 0;
+
+    transition: opacity var(--anim);
+}
+
+.reg-checkbox:checked + .reg-agreement-icon>.icon-check {
+    opacity: 1;
+}
+
+.reg-agreement-text {
+    line-height: 1.71;
+    color: var(--text-color);
+
+    user-select: none;
+}
+
+.reg-agreement-link {
+    text-decoration: underline;
+    color: var(--accent-color);
+}
+
+.reg-btn {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    
+    color: var(--white);
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+
+    transition: background-color var(--anim);
+}
+
+.reg-btn:focus,
+.reg-btn:hover {
+    background-color: #188CE8;
+}
 
 /* Стилі для portfolio.html */
 .filter {
